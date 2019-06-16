@@ -28,7 +28,7 @@ public class KMP {
 
         while (i < n) {
             //se caracter for igual, incrementa mais um para pegar padrao
-			if (t.charAt(i) == p.charAt(j))
+			if (p.charAt(j) == '?' || t.charAt(i) == p.charAt(j))
 			{
 				j++;
 				i++;

@@ -15,7 +15,7 @@ public class ForcaBruta {
 			aux = i;
 			for (j = 0; j < m && aux < n; j++) {
 				//se o valor dos caracteres nao for igual, pula pro proximo
-				if (t.charAt(aux) != p.charAt(j))
+				if (t.charAt(aux) != p.charAt(j) && p.charAt(j) != '?')
 					break;
 				//se nao verifica a proxima posição do padrao
 				aux++;

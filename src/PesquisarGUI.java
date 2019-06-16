@@ -73,7 +73,6 @@ class PesquisarGUI extends JDialog implements ActionListener {
 			}
 			if(tipoPesquisa == "Boyer-Moore"){
 				BoyerMoore boyerMoore = new BoyerMoore();
-				boyerMoore.Pesquisar(txtPesq.getText(), texto);
 				results = boyerMoore.Pesquisar(txtPesq.getText(), texto);
 			}
 			if(tipoPesquisa == "Força Bruta"){

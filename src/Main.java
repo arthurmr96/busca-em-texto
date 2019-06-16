@@ -1,16 +1,12 @@
-import com.sun.deploy.util.ArrayUtil;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.io.*;
-import java.util.Collection;
-import java.util.Random;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import javax.swing.text.*;
 import javax.swing.text.rtf.RTFEditorKit;
 
 class Main extends JFrame implements ActionListener {
@@ -110,8 +106,8 @@ class Main extends JFrame implements ActionListener {
 
 		if (e.getSource() == mSobre) {
 			JOptionPane.showMessageDialog(this,
-					"BUSCA EM TEXTO\nversao 2016.1\n" +
-							"Interface desenvolvida por: Arthur Mendonca e Matheus Elias.\n" +
+					"BUSCA EM TEXTO\nversao 2019/1\n" +
+							"Interface desenvolvida por: Arthur Mendonca e João Vitor Gomes.\n" +
 							"FACULDADE COTEMIG (somente para fins didaticos)");
 		}
 
