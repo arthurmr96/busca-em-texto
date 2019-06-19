@@ -36,19 +36,4 @@ public class RabinKarp {
 
 		return results;
 	}
-
-	/*
-	public static void main(String args[]) {
-		String t = "texto de teste";
-		String p = "teste";
-
-		int pos = RKSearch(p, t);
-
-		if (pos == -1)
-			JOptionPane.showMessageDialog(null, "Texto: " + t + "\nPadr�o: "
-					+ p + "\nPadr�o nao encontrado!");
-		else
-			JOptionPane.showMessageDialog(null, "Texto: " + t + "\nPadr�o: "
-					+ p + "\nPadr�o encontrado na posi��o: " + pos + ".");
-	}*/
 }

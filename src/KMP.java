@@ -53,21 +53,4 @@ public class KMP {
         return results;
 
     }
-
-	/*
-    public static void main(String args[]) {
-		String t = "abracadababra";
-		String p = "abracadabra";
-
-		initNext(p);
-
-		int pos = KMPSearch(p, t);
-
-		if (pos == -1)
-			JOptionPane.showMessageDialog(null, "Texto: " + t + "\nPadr�o: "
-					+ p + "\nPadr�o nao encontrado!");
-		else
-			JOptionPane.showMessageDialog(null, "Texto: " + t + "\nPadr�o: "
-					+ p + "\nPadr�o encontrado na posi��o: " + pos + ".");
-	}*/
 }

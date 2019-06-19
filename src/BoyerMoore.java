@@ -21,6 +21,7 @@ public class BoyerMoore {
         i = m - 1;
         j = m - 1;
 
+        //realiza calculo do vetor de jump
         initSkip(p);
         while (j >= 0) {
             while (t.charAt(i) != p.charAt(j)) {
@@ -45,36 +46,5 @@ public class BoyerMoore {
         }
 
         return results;
-/*
-        initSkip(p);
-        while (j >= 0) {
-            while (t.charAt(i) != p.charAt(j)) {
-                a = skip[t.charAt(i)];
-                i += (m - j > a) ? (m - j) : a;
-                if (i >= n)
-                    return results;
-                j = m - 1;
-            }
-            i--;
-            j--;
-        }
-        i = i + 1;
-        results.add(i);
-
-        return results;
-
-    */
-
-	/*
-    public static void main(String args[]) {
-		int pos = BMSearch(p, t);
-
-		if (pos == -1)
-			JOptionPane.showMessageDialog(null, "Texto: " + t + "\nPadr�o: "
-					+ p + "\nPadr�o nao encontrado!");
-		else
-			JOptionPane.showMessageDialog(null, "Texto: " + t + "\nPadr�o: "
-					+ p + "\nPadr�o encontrado na posi��o: " + pos + ".");
-	}*/
     }
 }

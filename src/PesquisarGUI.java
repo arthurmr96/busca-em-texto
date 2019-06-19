@@ -60,9 +60,11 @@ class PesquisarGUI extends JDialog implements ActionListener {
 		if(e.getSource() == btOk) {
 			painelTexto.getStyledDocument().setCharacterAttributes(0, painelTexto.getDocument().getLength(), StyleContext.getDefaultStyleContext().getStyle(StyleContext.DEFAULT_STYLE), true);
 
+			//se não for case sensitive, coloca em minusculo as palavras do texto pesquisado
 			if(!chkCaseSensitive.isSelected()){
 				texto = texto.toLowerCase();
 			}
+			//realiza pesquisa de acordo com o tipo selecionado
 			if(tipoPesquisa == "KMP"){
 				KMP kmp = new KMP();
 				results = kmp.Pesquisar(txtPesq.getText(), texto);
@@ -82,19 +84,25 @@ class PesquisarGUI extends JDialog implements ActionListener {
 
 			ListIterator<Integer> iteratorResults = results.listIterator();
 			if(chkSubstituir.isSelected()){
+				//se tiver sido selecionado a opção de substituição, substituir ocorrências
 				painelTexto.setText(texto.replaceAll(txtPesq.getText(), txtSubs.getText()));
 			}
 			else{
+				//se não, colore palavras encontradas de acordo com seu indice
 				while(iteratorResults.hasNext()) {
+					//indice do inicio da palavra encontrada
 					int prox = iteratorResults.next();
 					float brilho = new Random().nextFloat();
 
+					//gera cor aleatoria com brilho não tão escuro
 					Color randomColor = Color.getHSBColor(new Random().nextFloat(), new Random().nextFloat(), brilho < 0.5f ? 0.5f : brilho);
 					StyleConstants.setBackground(painelTexto.getInputAttributes(), randomColor);
+					//colore do indice de inicio da palavra + os indices subsequentes de acordo com o tamanho da palavra
 					painelTexto.getStyledDocument().setCharacterAttributes(prox, txtPesq.getText().length(), painelTexto.getInputAttributes(), false);
 				}
 			}
 
+			//fecha pop up
 			this.dispose();
 		}
 	}

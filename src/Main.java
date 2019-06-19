@@ -36,6 +36,9 @@ class Main extends JFrame implements ActionListener {
 		mPesquisar.addActionListener(this);
 		menuBar.add(mPesquisar);
 
+		mSobre.setMnemonic(KeyEvent.VK_S);
+		menuBar.add(mSobre);
+
 		// Ações relativas ao arquivo
 		mNovo.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, ActionEvent.CTRL_MASK));
 		mNovo.addActionListener(this);
